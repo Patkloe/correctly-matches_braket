@@ -1,3 +1,4 @@
+// version 1
 var std = [];
 function open(c){
  var dict = { 1:"(", 2:"[", 3:"{"};
