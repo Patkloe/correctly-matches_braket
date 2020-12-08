@@ -1,31 +1,31 @@
 // version 1
-var std = [];
+ var std = [];
 function open(c){
  var dict = { 1:"(", 2:"[", 3:"{"};
- var getkeys = Object.keys(dict);
+ var getkeys = Object.values(dict);
  var temp = c;
  for(var j of getkeys){
-    if(dict[j] === temp){
+    if(j === temp){
      return true;
     }
    }
 }// end open
 function close(c){
  var dict = { 1:")", 2:"]", 3:"}"};
- var getkeys = Object.keys(dict);
+ var getkeys = Object.values(dict);
  var temp = c;
  for(var j of getkeys){
-    if(dict[j] === temp){
+    if(j === temp){
      return true;
     }
  }
 }// end close
 function couple(x,y){
-  var dict3 = { 1:"{}",2:"()",3:"[]"};
+  var dict = { 1:"{}",2:"()",3:"[]"};
   var val = x+y;
-  var getkeys = Object.keys(dict3);
+  var getkeys = Object.values(dict);
   for(var i of getkeys){
-    if(dict3[i] === val){
+    if(i === val){
        return true;
     }
    }
@@ -59,4 +59,4 @@ var deb = 0;
  return false;
  }
 } // end function isBalance.
-isBalance("[]()");
+isBalance("[](()");
